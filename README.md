@@ -17,6 +17,7 @@ pip install -r requirements.txt
 3. EDA_dataset.ipynb 파일부터 실행하여 train, test split 된 파일을 생성합니다. <br> 이후, 각 셀을 실행시키면서 train, validation csv를 저장합니다.
 4. jeju_kobart.ipynb를 실행합니다. <br> 해당 셀을 그대로 실행할 경우 문제가 없지만, 만약 custom dataset을 이용하려는 경우 dictionary 형태를 잘 지켜주세요. <br> ex. {'kr': "한국어", 'en':"English"}
 5. jeju_kobart.ipynb는 한 파일에 fine tuning과 evaluation을 모두 진행합니다. 참고하여 실행하여 주세요. (trainer.push_to_hub() 이후는 evaluation process)
+6. 만약, Conformer(no finetuning) + JejuBART(KoBART jeju dialect fine tuning)를 사용하고 싶다면 위의 5번 학습 이후 jeju_conformer.ipynb 파일을 실행해주세요.
 
 ## Evaluation Result
 | Model Name | BLEU Score | CER Score | Human Voting Score |
